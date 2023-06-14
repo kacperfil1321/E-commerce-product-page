@@ -1,13 +1,16 @@
 body{
     margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 
 .attribution{
     font-size: 11px; text-align: center;
 }
+
 .attribution a{
     color: hsl(228, 45%, 44%);
 }
+
 #top-bar{
     width: 100%;
     height: 100px;
@@ -15,37 +18,42 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 #top-bar #left-side, #top-bar #right-side{
     height: 100%;
     display: flex;
     align-items: center;
     border-bottom: solid lightgrey 1px;
 }
+
 #top-bar #left-side{
     width: 70%;
     margin-left: 10%;
     justify-content: flex-start;
 }
+
 #top-bar #right-side{
     width: 10%;
     margin-right: 10%;
     justify-content: flex-end;
 }
+
 #top-bar #left-side #menu{
     height: 100%;
 }
+
 #top-bar #left-side #menu ul{
     margin: 0;
     height: 100%;
     list-style: none;
     display: flex;
     align-items: center;
-    font-family: 'Kumbh Sans', sans-serif;
 }
 #top-bar #left-side #menu ul li{
     height: 100%;
     margin-right: 25px;
 }
+
 #top-bar #left-side #menu ul li a{
     height: 100%;
     display: flex;
@@ -57,52 +65,171 @@ body{
     box-sizing: border-box;
     transition-duration: 0.4s;
 }
+
 #top-bar #left-side #menu ul li a:hover{
     opacity: 100%;
     border-bottom: solid hsl(26, 100%, 55%) 5px;
     transition-duration: 0.4s;
 }
+
 #top-bar #right-side #profile{
     margin-left: 20px;
 }
+
 #top-bar #right-side #profile img{
     border: solid white 2px;
     border-radius: 50%;
     transition-duration: 0.4s;
 }
+
 #top-bar #right-side #profile img:hover{
     border: solid hsl(26, 100%, 55%) 2px;
     transition-duration: 0.4s;
 }
+
 #content{
     width: 100%;
-    height: calc(100vh - 112px);
+    height: calc(100vh - 114px);
 }
-#content #images-side, #content #text-side{
+
+#images-side, #text-side{
     float: left;
     width: 50%;
     height: 100%;
 }
-#content #images-side{
+
+#images-side{
     display: flex;
     justify-content: center;
     align-items: flex-end;
     flex-direction: column;
 }
-#content #images-side #thumbnails{
+
+#images-side #main, #images-side #thumbnails{
+    margin-right: 75px;
+}
+
+#images-side #thumbnails{
     width: 320px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 15px;
 }
-#content #images-side img{
+
+#images-side img{
     border-radius: 10px;
 }
-#content #images-side #thumbnails img{
+
+#images-side #thumbnails img{
     border: solid white 2px;
 }
-#content #images-side #thumbnails .active{
+
+#images-side #thumbnails .active{
     border-color: hsl(26, 100%, 55%);
     opacity: 50%;
+}
+
+#text-side{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#text-side #company{
+    color: hsl(26, 100%, 55%);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+#text-side #title{
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#text-side #discription{
+    color: grey;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+#text-side #priceBox, #text-side #quantityBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#text-side #priceBox{
+    margin-bottom: 10px;
+}
+
+#text-side #price{
+    font-weight: bold;
+    font-size: 30px;
+    margin-right: 25px;
+}
+
+#text-side #discount{
+    color: hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%);
+    padding: 4px 7px;
+    border-radius: 10px;
+}
+
+#text-side #priceBefore{
+    color: lightgrey;
+    text-decoration: line-through;
+    margin-bottom: 25px;
+}
+
+#text-side #quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(223, 64%, 98%);
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+#text-side #quantity #quantityValue{
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+}
+
+#text-side #quantity #plus, #text-side #quantity #minus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+    cursor: pointer;
+    border: none;
+    background-color: hsl(223, 64%, 98%);
+}
+
+#text-side #quantityBox #addToCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    padding: 13px 40px;
+    border: none;
+    color: white;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#text-side #quantityBox #addToCart:hover{
+    opacity: 50%;
+    transition-duration: 0.4s;
+}
+
+#text-side #quantityBox #addToCart svg{
+    margin-right: 10px;
 }
