@@ -32,7 +32,7 @@
 
   <div id="content">
     <div id="images-side">
-      <div id="main"><img id="image" src="images/image-product-1.jpg" width="320px"></div>
+      <div id="main"><img id="mainImage" src="images/image-product-1.jpg" width="320px"></div>
       <div id="thumbnails">
         <img class="active" src="images/image-product-1-thumbnail.jpg" width="70px">
         <img src="images/image-product-2-thumbnail.jpg" width="70px">
@@ -64,6 +64,24 @@
           Add to cart
         </button>
       </div>
+    </div>
+  </div>
+
+  <div id="gallery">
+    <div id="main">
+      <div id="image">
+        <img id="galleryImage" src="images/image-product-1.jpg" height="100%">
+        <button id="close"><svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg></button>
+        <button id="previous"><svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></button>
+        <button id="next"><svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg></button>  
+      </div>
+    </div>
+
+    <div id="galleryThumbnails">
+      <img onclick="switchGalleryImage(1)" class="active" src="images/image-product-1-thumbnail.jpg" width="85px">
+      <img onclick="switchGalleryImage(2)" src="images/image-product-2-thumbnail.jpg" width="85px">
+      <img onclick="switchGalleryImage(3)" src="images/image-product-3-thumbnail.jpg" width="85px">
+      <img onclick="switchGalleryImage(4)" src="images/image-product-4-thumbnail.jpg" width="85px">
     </div>
   </div>
   
