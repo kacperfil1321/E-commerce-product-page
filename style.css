@@ -72,6 +72,41 @@ body{
     transition-duration: 0.4s;
 }
 
+#top-bar #right-side #cart{
+    position: relative;
+    cursor: pointer;
+}
+
+#top-bar #right-side #cart #insideCart{
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    background-color: white;
+    cursor: default;
+    box-shadow: 0 0 15px 2px black;
+    border-radius: 5px;
+    opacity: 0;
+    transition-duration: 0.4s;
+}
+
+#top-bar #right-side #cart #insideCart #cartText{
+    padding: 10px;
+    border-bottom: solid lightgrey 1px;
+    font-weight: bold;
+}
+
+#top-bar #right-side #cart #insideCart #cartContents{
+    height: 75px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: grey;
+}
+
 #top-bar #right-side #profile{
     margin-left: 20px;
 }
@@ -79,6 +114,7 @@ body{
 #top-bar #right-side #profile img{
     border: solid white 2px;
     border-radius: 50%;
+    cursor: pointer;
     transition-duration: 0.4s;
 }
 
@@ -127,6 +163,7 @@ body{
 
 #images-side #thumbnails img{
     border: solid white 2px;
+    cursor: pointer;
 }
 
 #images-side #thumbnails .active{

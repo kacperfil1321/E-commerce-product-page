@@ -1,3 +1,48 @@
+//Open/close cart
+var cartStatus = 0, cart = document.getElementById('insideCart');
+document.getElementById('cartStatus').addEventListener('click', function (){
+    if(cartStatus == 0){
+        cart.style.opacity = '1';
+        cartStatus = 1;
+    }
+    else{
+        cart.style.opacity = '0';
+        cartStatus = 0;
+    }
+});
+
+//Add items to cart
+var itemsInCart = 0;
+document.getElementById('addToCart').addEventListener('click', function (){
+    itemsInCart =+ parseInt(document.getElementById('quantityValue').innetText);
+});
+
+//Switch main image
+var mainImageSrc;
+
+function switchMainImage(mainImage){
+    image = mainImage;
+    document.getElementById('images-side').getElementsByClassName('active')[0].classList.remove('active');
+    document.getElementById('thumbnails').getElementsByTagName('img')[mainImage - 1].classList.add('active');
+
+    switch(mainImage){
+        case 1:
+            mainImageSrc = 'images/image-product-1.jpg';
+            break;
+        case 2:
+            mainImageSrc = 'images/image-product-2.jpg';
+            break;
+        case 3:
+            mainImageSrc = 'images/image-product-3.jpg';
+            break;
+        case 4:
+            mainImageSrc = 'images/image-product-4.jpg';
+            break;
+    }
+    document.getElementById('mainImage').src = mainImageSrc;
+    switchGalleryImage(mainImage);
+}
+
 //Gallery open/close
 document.getElementById('mainImage').addEventListener('click', function (){
     document.getElementById('gallery').style.display = 'block';
@@ -18,6 +63,7 @@ document.getElementById('next').addEventListener('click', function (){
         image++;
     }
     switchGalleryImage(image);
+    switchMainImage(image);
 });
 
 document.getElementById('previous').addEventListener('click', function (){
@@ -28,6 +74,7 @@ document.getElementById('previous').addEventListener('click', function (){
         image--;
     }
     switchGalleryImage(image);
+    switchMainImage(image);
 });
 
 function switchGalleryImage(img){
